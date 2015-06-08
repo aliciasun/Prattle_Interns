@@ -1,11 +1,11 @@
 
 # coding: utf-8
 
-# In[1]:
+# In[2]:
 
 # This version tracks the portfolio balance on a day to day basis no matter trading happens or not. 
 # strategy is all in and all out
-get_ipython().magic(u'matplotlib inline')
+#get_ipython().magic(u'matplotlib inline')
 import dateutil.parser
 import json
 import matplotlib.pyplot as plt
@@ -42,7 +42,7 @@ def getBankData(bank):
     return df
 
 
-# In[2]:
+# In[3]:
 
 frcData = getBankData('frc')
 # remove all the null values from the dataframe
@@ -209,7 +209,6 @@ portfolio_balance=[]
 #for i in range(len(TopEnd)):
 #    for j in range(len(BottomEnd)):
 #        ParaTuple.append((TopEnd[i],BottomEnd[j]))
-i=0
 ParaTuple=[]
 TopEnd = [x/100.0 for x in range(75, 95, 1)]
 BottomEnd = [x/100.0 for x in range(5, 25, 1)]
@@ -315,7 +314,7 @@ print backTesting(dates, datePriceC, dateMomen)
 # In[24]:
 
 plt.plot(dates, portfolio_balance)
-
+plt.show()
 
 # In[25]:
 
